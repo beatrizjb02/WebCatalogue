@@ -4,23 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ProductComponent } from './catalogue/components/product/product.component';
-import { FilterComponent } from './catalogue/components/filter/filter.component';
-import { HomeComponent } from './catalogue/page/home/home.component';
+import { CatalogueModule } from './catalogue/catalogue.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ProductComponent,
-    FilterComponent,
-    HomeComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CatalogueModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
