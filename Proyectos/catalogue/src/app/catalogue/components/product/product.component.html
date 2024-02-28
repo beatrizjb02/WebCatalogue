@@ -1,13 +1,13 @@
 <div>
   <mat-card *ngFor="let product of products">
     <mat-card-header>
-      <mat-card-title>{{ product.title }}</mat-card-title>
+      <mat-card-title class="title">{{ product.title }}</mat-card-title>
       <mat-card-subtitle></mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
      <div class="image"><img src="{{product.image}}"></div>
-
-      {{ product.category }},{{ product.price }}€
+      <h1>{{ product.price }}€</h1>
+      {{ product.category }}
     </mat-card-content>
   </mat-card>
 </div>

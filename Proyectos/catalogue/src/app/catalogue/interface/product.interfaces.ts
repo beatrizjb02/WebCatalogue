@@ -9,10 +9,10 @@ export interface Product {
 }
 
 export enum Category {
-  Electronics = "electronics",
-  Jewelery = "jewelery",
-  MenSClothing = "men's clothing",
-  WomenSClothing = "women's clothing",
+  Electronics = "Electronics",
+  Jewelery = "Jewelery",
+  MenSClothing = "Men's clothing",
+  WomenSClothing = "Women's clothing",
 }
 
 export interface Rating {

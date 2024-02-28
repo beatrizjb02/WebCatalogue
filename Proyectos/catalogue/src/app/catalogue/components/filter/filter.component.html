@@ -1,8 +1,8 @@
 <mat-form-field>
   <mat-label>Categoría</mat-label>
-  <mat-select>
-     <!-- <mat-option *ngFor="let food of foods" [value]="food.value">
-      {{food.viewValue}}
-    </mat-option> -->
+  <mat-select (selectionChange)="categoryProducts($event.value)" >
+     <mat-option *ngFor="let category of categories" [value]="category">
+      {{category}}
+    </mat-option>
   </mat-select>
 </mat-form-field>
