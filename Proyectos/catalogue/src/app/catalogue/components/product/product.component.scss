@@ -1,7 +1,25 @@
-mat-card{
-  width: 20vw;
-  margin: auto;
+div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+mat-card {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
   top: 1vh;
-  background-color: rgb(136, 136, 136);
+  background-color: rgb(255, 255, 255);
   padding: 2vh;
+}
+
+img{
+  width: 170px;
+  height: 200px;
+
+}
+.image{
+  height: 200px;
+}
+mat-card-header{
+  height: 100px;
 }
