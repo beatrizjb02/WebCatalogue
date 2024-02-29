@@ -1,0 +1,24 @@
+<body>
+  <div class="centered">
+    <mat-card *ngIf="product">
+      <mat-card-header>
+        <mat-card-title class="title">{{ product.title }}</mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content class="content">
+        <div class="left">
+          <img [src]="product.image" alt="{{ product.title }}" />
+        </div>
+        <div class="right">
+          <span class="price">{{ product.price }}€</span>
+          <div class="star">
+            <span class="rating">⭐{{ product.rating.rate }} | </span>
+            <span class="opinions"> {{ product.rating.count }} opinions</span>
+          </div>
+          <span class="subtitle">Description:</span>
+          <span class="description">{{ product.description }}</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</body>

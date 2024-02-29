@@ -10,12 +10,19 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
 import { ByProductsComponent } from './page/by-products/by-products.component';
 import { CatalogueRoutingModule } from './catalogue-routing.module';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import { ProductDescriptionComponent } from './page/product-description/product-description.component';
+
+
 @NgModule({
   declarations: [
     ProductComponent,
     FilterComponent,
     HomeComponent,
     ByProductsComponent,
+    ProductDescriptionComponent,
   ],
   imports: [
     CommonModule,
@@ -23,6 +30,10 @@ import { CatalogueRoutingModule } from './catalogue-routing.module';
     MatSelectModule,
     MatCardModule,
     CatalogueRoutingModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule
+
   ],
   exports: [HomeComponent],
 })

@@ -1,0 +1,88 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+mat-card {
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: 3vh;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+.title {
+  font-size: 30px;
+}
+img {
+  display: flex;
+  height: 500px;
+  max-width: 500px;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  padding: 10px;
+}
+
+mat-card-header {
+  height: 140px;
+}
+img:hover {
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+}
+div {
+  display: flex;
+  padding-bottom: 5vh;
+}
+.left {
+  width: fit-content;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  margin: 2vw;
+}
+
+.price {
+  font-weight: 500;
+  font-size: 40px;
+}
+.description {
+  font-size: 25px;
+  line-height: 30px;
+  margin: 1vw;
+  font-style: italic;
+}
+.subtitle {
+  font-style: italic;
+  font-size: 28px;
+  margin-top: 3vh;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+}
+.rating {
+  font-size: 28px;
+  margin-top: 3vh;
+}
+
+.opinions{
+  font-size:25px;
+  margin-top: 3vh;
+  font-style: italic;
+}
+.star{
+  top: 3vh;
+}

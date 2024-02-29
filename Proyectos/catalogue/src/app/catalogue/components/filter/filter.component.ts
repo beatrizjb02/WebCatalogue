@@ -19,12 +19,12 @@ export class FilterComponent implements OnInit {
     this.productService.getCategory().subscribe((data: string[]) => {
       this.categories = data;
       this.categories.unshift('All');
-      console.error(this.categories);
+      console.log(this.categories);
     });
 
     this.productService.getProducts().subscribe((data: Product[]) => {
       this.products = data;
-      console.error(this.products);
+      console.log(this.products);
     });
   }
 

@@ -1,7 +1,6 @@
-<mat-toolbar>
-Catalogue
-</mat-toolbar>
 <div>
-<catalogue-filter (categoryOption)="getCategoryOptions($event)"></catalogue-filter>
-<catalogue-product [products]="products"></catalogue-product>
+  <catalogue-filter
+    (categoryOption)="getCategoryOptions($event)"
+  ></catalogue-filter>
+  <catalogue-product [products]="products"></catalogue-product>
 </div>
