@@ -1,0 +1,36 @@
+div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 5vh;
+}
+mat-card {
+  width: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  top: 1vh;
+  background-color: rgb(255, 255, 255);
+  padding: 2vh;
+  margin: 20px;
+}
+ .title{
+  font-size: 18px;
+ }
+img{
+  height: 150px;
+
+}
+.image{
+  height: 150px;
+}
+mat-card-header{
+  height: 140px;
+}
+
+.description{
+  font-size:18px;
+}
+h1{
+  margin:auto;
+  padding: 2vh;
+}

@@ -1,18 +1,41 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Category } from '../../interface/product.interfaces';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ProductService } from '../../services/product.service';
+import { Product } from '../../interface/product.interfaces';
 
 @Component({
   selector: 'catalogue-filter',
   templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.scss'],
 })
-export class FilterComponent {
-  @Output() categoryOption = new EventEmitter<string>();
-  categories: string[] = Object.values(Category).filter(value => typeof value === 'string');
+export class FilterComponent implements OnInit {
+  @Output() categoryOption = new EventEmitter<Product[]>();
 
-  constructor() {}
+  public categories: string[] = [];
+  public products: Product[] = [];
+
+  constructor(private productService: ProductService) {}
+
+  ngOnInit() {
+    this.productService.getCategory().subscribe((data: string[]) => {
+      this.categories = data;
+      this.categories.unshift('All');
+      console.error(this.categories);
+    });
+
+    this.productService.getProducts().subscribe((data: Product[]) => {
+      this.products = data;
+      console.error(this.products);
+    });
+  }
 
   categoryProducts(category: string): void {
-    this.categoryOption.emit(category);
+    if (category === 'All') {
+      this.categoryOption.emit(this.products);
+    } else {
+      const optionCategory = this.products.filter(
+        (product: Product) => product.category === category
+      );
+      this.categoryOption.emit(optionCategory);
+    }
   }
 }

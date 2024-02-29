@@ -1,26 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './catalogue/page/home/home.component';
-import { ProductComponent } from './catalogue/components/product/product.component';
-import { FilterComponent } from './catalogue/components/filter/filter.component';
 
 const routes: Routes = [
   {
-    path:'home',
-    component:HomeComponent
+    path: 'home',
+    loadChildren: () =>
+      import('./catalogue/catalogue.module').then((m) => m.CatalogueModule),
   },
-  {
-    path:'products',
-    component:ProductComponent
-  },
-  {
-    path:'filter',
-    component:FilterComponent
-  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

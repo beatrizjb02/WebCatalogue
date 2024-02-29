@@ -1,13 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ProductService } from '../../services/product.service';
 import { Product } from '../../interface/product.interfaces';
+import { ProductService } from '../../services/product.service';
 
 @Component({
-  selector: 'catalogue-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss'],
+  selector: 'app-by-products',
+  templateUrl: './by-products.component.html',
+  styleUrls: ['./by-products.component.scss']
 })
-export class ProductComponent implements OnInit {
+export class ByProductsComponent implements OnInit {
   @Input()
   public products: Product[] = [];
   constructor(private productService: ProductService) {}
@@ -20,5 +20,4 @@ export class ProductComponent implements OnInit {
     this.productService.getProducts().subscribe((products) => {
       this.products = products;
     });
-  }
-}
+  }}

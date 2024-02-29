@@ -1,3 +1,6 @@
+<mat-toolbar>
+  Description
+</mat-toolbar>
 <div>
   <mat-card *ngFor="let product of products">
     <mat-card-header>
@@ -7,6 +10,9 @@
     <mat-card-content>
      <div class="image"><img src="{{product.image}}"></div>
       <h1>{{ product.price }}€</h1>
+      <div class="description">
+        {{ product.description }}
+      </div>
     </mat-card-content>
   </mat-card>
 </div>
