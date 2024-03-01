@@ -1,6 +1,6 @@
 <div>
     <mat-card *ngFor="let product of products"
-      ><a [routerLink]="['productDescription', product.id]">
+      ><a [routerLink]="['/productDescription', product.id]">
         <mat-card-header>
           <mat-card-title class="title">{{ product.title }}</mat-card-title>
           <mat-card-subtitle></mat-card-subtitle>
