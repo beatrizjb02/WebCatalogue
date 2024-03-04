@@ -75,8 +75,8 @@ div {
 
 @media (max-width: 1200px) {
   .product-image {
-    height: 150px;
-    max-width: 200px;
+    height: 250px;
+    max-width: 300px;
   }
   mat-card-header {
     height: 100px;
@@ -96,9 +96,6 @@ div {
     height: 150px;
     max-width: 200px;
   }
-  mat-card-header {
-    height: 100px;
-  }
   .price,
   .title {
     font-size: 1em;
@@ -110,11 +107,5 @@ div {
   }
   .subtitle{
     font-size: 1.2em;
-  }
-  .description {
-    font-size: 1.02em;
-    line-height: 1em;
-    margin: 1em;
-    font-style: italic;
   }
 }
