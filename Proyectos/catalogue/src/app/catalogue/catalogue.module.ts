@@ -8,7 +8,6 @@ import { ProductComponent } from './components/product/product.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
-import { ByProductsComponent } from './page/by-products/by-products.component';
 import { CatalogueRoutingModule } from './catalogue-routing.module';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
@@ -21,7 +20,6 @@ import { ProductDescriptionComponent } from './page/product-description/product-
     ProductComponent,
     FilterComponent,
     HomeComponent,
-    ByProductsComponent,
     ProductDescriptionComponent,
   ],
   imports: [
