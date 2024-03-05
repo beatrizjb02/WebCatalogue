@@ -8,8 +8,10 @@
         <mat-card-content>
           <div class="image"><img src="{{ product.image }}" /></div>
           <h1>{{ product.price }}€</h1>
-        </mat-card-content></a
-      >
+          <div *ngIf="ifDescription" class="description">
+            {{ product.description }}
+          </div>
+        </mat-card-content></a>
     </mat-card>
 </div>
 

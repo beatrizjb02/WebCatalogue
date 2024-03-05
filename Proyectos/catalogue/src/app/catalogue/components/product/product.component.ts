@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../interface/product.interfaces';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'catalogue-product',
@@ -10,10 +11,14 @@ import { Product } from '../../interface/product.interfaces';
 export class ProductComponent implements OnInit {
   @Input()
   public products: Product[] = [];
-  constructor(private productService: ProductService) {}
+  public ifDescription:boolean = false;
+  constructor(private productService: ProductService, private activatedRoute:ActivatedRoute,) {}
 
   ngOnInit(): void {
     this.getProducts();
+    this.activatedRoute.url.subscribe(url => {
+      this.ifDescription = url.toString().includes('description');
+    });
   }
 
   getProducts(): void {
