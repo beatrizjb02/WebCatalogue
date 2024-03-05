@@ -9,13 +9,13 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'tienda',
+    path: 'catalogue',
     component: HomeComponent,
   },
   { path: 'productDescription/:id', component: ProductDescriptionComponent },
   {
     path: '**',
-    redirectTo: 'home/tienda',
+    redirectTo: 'home/catalogue',
   },
 ];
 @NgModule({
